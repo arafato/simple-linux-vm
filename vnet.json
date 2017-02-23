@@ -1,0 +1,45 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "commonSettings": {
+      "type": "object"
+    },
+    "vnets": {
+        "type": "object"
+    }
+  },
+  "variables": {
+    "vnets": "[parameters('vnets')]",
+    "api": "[parameters('commonSettings').apiVersions.virtualNetworks]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "[variables('vnets').public.name]",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "[variables('api')]",
+      "tags": {
+        "displayName": "VirtualNetwork"
+      },
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[variables('vnets').public.range]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "[variables('vnets').public.subnet.GE.name]",
+            "properties": {
+              "addressPrefix": "[variables('vnets').public.subnet.GE.address]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('vnets').public.subnet.GE.nsgName)]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
