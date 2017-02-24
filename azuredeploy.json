@@ -30,7 +30,7 @@
     },
     "adminSecureShellKey": {
       "type": "string",
-      "defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcKQAawa3PLuBbVQihpRjhF4RaAnodo7tan+Kc9cNbSkdH/LdH7DR2GPiMvNJ+3heRsfltpp7WHPROvrZ3zfXyJS9T3EBj90aoZjpmF24lfzbHGEBYVb8SgKYcO9Iw6OOz0C0fuasHBxazG/9a03M+xo4jKPK6AvUthfPPFkRpBEjsEgJ7zn2SofE/xePD0/IHvwD8IflP5SRfBAmivLclamxGZQmnr/EJHhXs/S26himO4VbF56epPnyr1FHw6elr1jm86U3x0oiElWbCj8OqD1dvqo9AOuYHI5jxf1lQ7FtlQ5svgoOP2Pa2QeiCDGCQe93kR0uHd1j0LQQ/5o3j olarafat@arafat",
+      "defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcKQAawa3PLuBbVQihpRjhF4RaAnodo7tan+Kc9cNbSkdH/LdH7DR2GPiMvNJ+3heRsfltpp7WHPROvrZ3zfXyJS9T3EBj90aoZjpmF24lfzbHGEBYVb8SgKYcO9Iw6OOz0C0fuasHBxazG/9a03M+xo4jKPK6AvUthfPPFkRpBEjsEgJ7zn2SofE/xePD0/IHvwD8IflP5SRfBAmivLclamxGZQmnr/EJHhXs/S26himO4VbF56epPnyr1FHw6elr1jm86U3x0oiElWbCj8OqD1dvqo9AOuYHI5jxf1lQ7FtlQ5svgoOP2Pa2QeiCDGCQe93kR0uHd1j0LQQ/5o42 olarafat@arafat",
       "metadata": {
         "description": "Admin SSH key for all Linux VMs"
       }
